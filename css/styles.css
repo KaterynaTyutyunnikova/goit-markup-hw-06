@@ -1,6 +1,4 @@
-.hidden{
-display: none;
-}
+
 body {
     font-family: "Roboto", sans-serif;
     color: #434455;
@@ -1068,12 +1066,11 @@ color: #f4f4fd;
               }
               .modal-check-text{
                 font-size: 12px;
-                letter-spacing: 0.04em;
+                letter-spacing: 0.01em;
                 color: #8e8f99;
                 line-height: 1.17; 
                 border-radius: 4px;
-                width: 256px ;
-                height: 31px;
+               
                 }
                 .modal-check-text{
                   display: flex;
