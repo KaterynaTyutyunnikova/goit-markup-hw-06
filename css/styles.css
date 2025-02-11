@@ -24,7 +24,7 @@ body {
   a {
     text-decoration: none;
   }
-  .img{
+  img{
     display: block;
     max-width: 100%;
     height: auto;
@@ -157,6 +157,7 @@ body {
       .contacts {
         font-style: normal;
         display: block;
+        
       }
     
       .contacts-list {
@@ -234,11 +235,18 @@ body {
 }
 
 .mobile-menu-close {
+  padding: 0;
   position: absolute;
   top: 24px;
   right: 24px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+
 }
 .mobile-icon{
     fill: #2e2f42;;
@@ -271,6 +279,7 @@ letter-spacing: 0.02em;
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: #434455;
+    
  
 }
 .contacts-item-mobile:not(:last-child) {
@@ -288,12 +297,16 @@ letter-spacing: 0.02em;
 .mob-soc-list{
     display: flex;
     gap: 40px;  
-    margin-top: 24px;
+   
 }
 .mob-soc-icon{
     fill: #f4f4fd;
+   
 }
-
+.contacts-mobile{
+  font-style: normal;
+  margin-bottom: 48px;
+}
 
 @media screen and (min-width: 768px) {
   .mobile-menu {
@@ -327,7 +340,6 @@ letter-spacing: 0.02em;
   }
 
 .hero-title {
-    font-weight: 700;
     font-size: 36px;
     line-height: 1.11;
     letter-spacing: 0.02em;
@@ -335,9 +347,9 @@ letter-spacing: 0.02em;
     color: #fff;
     max-width: 216px;
     margin-left: auto;
-    margin-right: auto;
-    margin-top: 0;
-    margin-bottom: 72px;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 72px;
   }
   .hero-btn {
     font-weight: 500;
@@ -361,6 +373,7 @@ letter-spacing: 0.02em;
   background-color: #404bbf;
   color: #fff;
 }
+
 @media (min-width: 768px){
    .hero{
     max-width: 768px;
@@ -380,16 +393,18 @@ letter-spacing: 0.02em;
         url(../images/hero/tabl-1@2x-min.jpg)
       }
     }
+    .hero-title{
+      font-size: 56px;
+      margin-bottom: 36px;
+      max-width: 496px;
+     }
    } 
-   .hero-title{
-    font-size: 56px;
-    margin-bottom: 36px;
-    max-width: 496px;
-   }
+   
 
 @media (min-width: 1158px){
     .hero {
-        max-width: 1158px;
+        max-width: 1440px;
+        max-height: 600px;
         padding: 188px 0;
         background-image: linear-gradient(
           rgba(46, 47, 66, 0.7),
@@ -406,13 +421,12 @@ letter-spacing: 0.02em;
         url(../images/hero/desk-1@2x-min.jpg)
       }
     }
-
-    }
     .hero-title{
        
-        font-size: 56px;
-        margin-bottom: 48px;
+      margin-bottom: 48px;
+  }
     }
+   
     
 
 .features {
@@ -499,11 +513,9 @@ letter-spacing: 0.02em;
   }
   .team {
     background-color: #f4f4fd;
-   
-  }
-  .container-team{
     padding: 96px 28px;
   }
+  
   .team-title {
     font-weight: 700;
     font-size: 36px;
@@ -574,7 +586,7 @@ letter-spacing: 0.02em;
         .team-list {
          display: flex;
           flex-wrap: wrap; 
-          gap: 24px; 
+          gap:64px 24px; 
           justify-content: center;
         }
       
@@ -589,14 +601,12 @@ letter-spacing: 0.02em;
       }
        
       @media screen and (min-width: 1158px) {
-        .team{
-            padding: 120px 0;
-        }
+       
         .team-item{
             width: calc((100% - 72px) / 4);
         }
         .container-team{
-            padding: 96px 16px;
+            padding:  16px;
         }
       } 
 
@@ -667,7 +677,7 @@ letter-spacing: 0.02em;
     color: #434455;
   }
   .container-portfolio {
-    padding: 48px 16px;
+    padding: 32px 16px;
     border: 1px solid #e7e9fc;
     border-top: none;
   }
@@ -710,6 +720,9 @@ letter-spacing: 0.02em;
     text-align: center;
    
   }
+  .footer-ifo{
+    margin-bottom: 72px;
+      }
   .footer-logo {
    
     margin-bottom: 16px;
@@ -741,14 +754,14 @@ color: #f4f4fd;
     color: #fff;
     margin-bottom: 16px;
   }
-  .footer-ifo{
-    margin-bottom: 72px;
-  }
- 
+  
   .f-link-list {
     display: flex;
     gap: 16px;
     justify-content: center;
+   
+  }
+  .footer-social{
     margin-bottom: 72px;
   }
   .f-link-list .f-list-item .footer-circle {
@@ -784,7 +797,7 @@ color: #f4f4fd;
   .input-subsc{
     border: 1px solid #fff;
     border-radius: 4px;
-    width: 264px;
+    width: 288px;
     height: 40px;
     background-color: transparent;
     font-weight: 400;
@@ -830,32 +843,38 @@ color: #f4f4fd;
             fill: #fff;
             margin-left: 16px;
           }
-          .container-subscribe{
-            width: 288px;
-            height: 136px;
-           
-          }
+          
           
           @media screen and (min-width: 768px){
-           
+            .text-media{
+              margin-bottom: 0;
+             
+            }
             .footer-ifo{
            
             text-align: left;
+            margin-bottom: 0;
 
             }
+            .input-subsc{
+              width: 264px;
+              margin-bottom: 0;
+            }
+          
             .page-footer .container {
                 display: flex;
                flex-direction: row;
                 align-items:baseline; 
                 flex-wrap: wrap; 
                 gap: 72px 24px;
-                padding: 96px 108px;
+                padding: 0 108px;
               }
               .footer-social {
                 display: flex;
                 gap: 16px;
                 flex-direction: column; 
                 align-items: start;
+                margin-bottom: 0;
               }
               .list-subscribe{
                 display: flex;
@@ -876,13 +895,14 @@ color: #f4f4fd;
           }
           @media screen and (min-width: 1158px){
             .page-footer .container{
-              padding: 100px 0;
-              
-              align-items: center;
+              padding: 0 15px;
+              gap: 0;
+              align-items: baseline;
              
             }
             .footer-ifo {
               margin-right: 120px;
+              margin-bottom: 0;
             }
             .footer-social{
               margin-right: 80px;
@@ -917,7 +937,7 @@ color: #f4f4fd;
             position: absolute;
             top: 50%;
             left: 50%;
-            padding: 72px 16px 16px 24px; 
+            padding: 72px 16px 24px 16px; 
             width: 288px;
             min-height: 623px;
             transform: translate(-50%, -50%);
