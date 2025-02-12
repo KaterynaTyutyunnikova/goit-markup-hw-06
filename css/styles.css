@@ -513,9 +513,11 @@ letter-spacing: 0.02em;
   }
   .team {
     background-color: #f4f4fd;
-    padding: 96px 28px;
+    padding: 96px 0;
   }
-  
+  .container-team{
+    padding: 0 28px;
+  }
   .team-title {
     font-weight: 700;
     font-size: 36px;
@@ -594,19 +596,21 @@ letter-spacing: 0.02em;
           width: calc((100% - 24px) / 2); 
         }
         .container-team{
-            padding: 96px 108px;
+            padding: 0 108px;
         }
 
 
       }
        
       @media screen and (min-width: 1158px) {
-       
+        .team {
+          padding: 120px 0;
+        }
         .team-item{
             width: calc((100% - 72px) / 4);
         }
         .container-team{
-            padding:  16px;
+            padding: 0 15px;
         }
       } 
 
